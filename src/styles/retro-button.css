@@ -1,0 +1,267 @@
+button {
+  position: relative;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #000;
+  background: #f0f0f0;
+  border: 1px solid #aaa;
+  border-top-color: #ccc;
+  border-left-color: #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+/* Scanline effect for retro feel */
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 1px,
+    rgba(255, 255, 255, 0.1) 1px,
+    rgba(255, 255, 255, 0.1) 2px
+  );
+  transition: left 0.8s ease;
+  animation: scanlines 4s linear infinite;
+}
+
+/* Retro CRT scanlines overlay */
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 1px,
+    rgba(0, 0, 0, 0.05) 1px,
+    rgba(0, 0, 0, 0.05) 2px
+  );
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+button:hover:not(:disabled) {
+  background: #f8f8f8;
+  border-color: #999;
+  border-top-color: #bbb;
+  border-left-color: #bbb;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 4px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 150, 255, 0.2);
+  animation: retroGlow 2s ease-in-out infinite alternate;
+}
+
+button:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+button:disabled {
+  background: #f5f5f5;
+  color: #999;
+  border-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+button:disabled::before,
+button:disabled::after {
+  display: none;
+}
+
+/* Red Button Variant */
+button.red-button {
+  background: #f0d0d0;
+  color: #8b0000;
+  border-color: #cc9999;
+  border-top-color: #ddaaaa;
+  border-left-color: #ddaaaa;
+}
+
+button.red-button:hover:not(:disabled) {
+  background: #f8d8d8;
+  border-color: #bb8888;
+  border-top-color: #ccaaaa;
+  border-left-color: #ccaaaa;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 4px rgba(0, 0, 0, 0.15), 0 0 8px rgba(255, 0, 0, 0.3);
+  animation: redGlow 2s ease-in-out infinite alternate;
+}
+
+button.red-button:active:not(:disabled) {
+  background: #e8c8c8;
+  border-color: #aa7777;
+  border-bottom-color: #bb9999;
+  border-right-color: #bb9999;
+}
+
+button.red-button:disabled {
+  background: #f5f0f0;
+  color: #cc9999;
+  border-color: #ddcccc;
+}
+
+/* Green Button Variant */
+button.green-button {
+  background: #d0f0d0;
+  color: #006400;
+  border-color: #99cc99;
+  border-top-color: #aaddaa;
+  border-left-color: #aaddaa;
+}
+
+button.green-button:hover:not(:disabled) {
+  background: #d8f8d8;
+  border-color: #88bb88;
+  border-top-color: #aaccaa;
+  border-left-color: #aaccaa;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 4px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 255, 0, 0.3);
+  animation: greenGlow 2s ease-in-out infinite alternate;
+}
+
+button.green-button:active:not(:disabled) {
+  background: #c8e8c8;
+  border-color: #77aa77;
+  border-bottom-color: #99bb99;
+  border-right-color: #99bb99;
+}
+
+button.green-button:disabled {
+  background: #f0f5f0;
+  color: #99cc99;
+  border-color: #ccddcc;
+}
+
+/* Blue Button Variant */
+button.blue-button {
+  background: #d0d0f0;
+  color: #000080;
+  border-color: #9999cc;
+  border-top-color: #aaaadd;
+  border-left-color: #aaaadd;
+}
+
+button.blue-button:hover:not(:disabled) {
+  background: #d8d8f8;
+  border-color: #8888bb;
+  border-top-color: #aaaacc;
+  border-left-color: #aaaacc;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 4px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 0, 255, 0.3);
+  animation: blueGlow 2s ease-in-out infinite alternate;
+}
+
+button.blue-button:active:not(:disabled) {
+  background: #c8c8e8;
+  border-color: #7777aa;
+  border-bottom-color: #9999bb;
+  border-right-color: #9999bb;
+}
+
+button.blue-button:disabled {
+  background: #f0f0f5;
+  color: #9999cc;
+  border-color: #ccccdd;
+}
+
+@keyframes redGlow {
+  0% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 2px 4px rgba(0, 0, 0, 0.15), 0 0 8px rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 2px 4px rgba(0, 0, 0, 0.15), 0 0 12px rgba(255, 50, 50, 0.5);
+  }
+}
+
+@keyframes greenGlow {
+  0% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 2px 4px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 255, 0, 0.3);
+  }
+  100% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 2px 4px rgba(0, 0, 0, 0.15), 0 0 12px rgba(50, 255, 50, 0.5);
+  }
+}
+
+@keyframes blueGlow {
+  0% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 2px 4px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 0, 255, 0.3);
+  }
+  100% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 2px 4px rgba(0, 0, 0, 0.15), 0 0 12px rgba(50, 50, 255, 0.5);
+  }
+}
+
+button:active:not(:disabled) {
+  background: #e8e8e8;
+  border-color: #888;
+  border-bottom-color: #bbb;
+  border-right-color: #bbb;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(1px);
+  animation: retroPulse 0.3s ease;
+}
+
+button:focus:not(:disabled) {
+  outline: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(0, 100, 200, 0.5);
+}
+
+@keyframes scanlines {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.retro-button:hover {
+  animation: retroGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes retroGlow {
+  0% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 2px 4px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 150, 255, 0.2);
+  }
+  100% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 2px 4px rgba(0, 0, 0, 0.15), 0 0 12px rgba(0, 200, 255, 0.4);
+  }
+}
+
+@keyframes retroPulse {
+  0% {
+    transform: translateY(1px) scale(1);
+  }
+  50% {
+    transform: translateY(1px) scale(0.98);
+  }
+  100% {
+    transform: translateY(1px) scale(1);
+  }
+}

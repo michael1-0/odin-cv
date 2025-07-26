@@ -1,0 +1,215 @@
+form {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  padding: 40px;
+  margin: 10px;
+  margin-bottom: 40px;
+  & label {
+    font-weight: bold;
+  }
+}
+
+form:last-child {
+  margin-bottom: 10px;
+}
+
+.controls {
+  flex: 2;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  overflow-y: scroll;
+  max-height: 600px;
+}
+
+.general-info-form .general-info-wrapper {
+  margin-top: 10px;
+}
+
+.general-info-form .general-info-wrapper div {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 10px;
+}
+
+.general-info-form textarea {
+  width: 100%;
+  min-height: 80px;
+}
+
+.general-info-form .general-info-wrapper div:last-child {
+  margin-bottom: 40px;
+}
+
+.general-info-form button {
+  margin-right: 10px;
+}
+
+.area-of-expertise-form > div:first-of-type {
+  margin-bottom: 20px;
+}
+
+.area-of-expertise-form .area-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+}
+
+.area-of-expertise-form .area-wrapper > div {
+  padding: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  flex-basis: 30%;
+}
+
+.area-of-expertise-form .area-wrapper > div button {
+  padding: 2px;
+  width: 50%;
+}
+
+.area-of-expertise-form .input-wrapper {
+  margin-block: 10px;
+}
+
+.area-of-expertise-form .input-wrapper > div {
+  display: flex;
+  gap: 10px;
+}
+
+.key-achievement-form .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  margin-block: 10px;
+  margin-bottom: 20px;
+}
+
+.key-achievement-form .input-wrapper div {
+  display: flex;
+  flex-direction: column;
+}
+
+.key-achievement-form .input-wrapper div:nth-child(2) {
+  align-self: stretch;
+}
+
+.key-achievement-form .input-wrapper div textarea {
+  width: 100%;
+}
+
+.key-achievement-form .data-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.key-achievement-form .data-wrapper > div {
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+}
+
+.practical-experience-form .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  margin-block: 10px;
+  margin-bottom: 20px;
+}
+.practical-experience-form .input-wrapper div {
+  display: flex;
+  flex-direction: column;
+}
+.practical-experience-form .data-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.practical-experience-form .data-wrapper > div {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+  padding: 8px;
+}
+
+.practical-experience-form .data-wrapper div .inner-data-wrapper {
+  margin: 8px;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+}
+.practical-experience-form .data-wrapper div ul li {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+  margin-block: 10px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.practical-experience-form .data-wrapper div ul li button {
+  max-width: 40px;
+  min-width: 40px;
+  padding: 4px;
+}
+
+.practical-experience-form .data-wrapper div input {
+  margin-right: 8px;
+}
+
+.educational-experience-form .input-wrapper {
+  margin-block: 10px;
+  margin-bottom: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.educational-experience-form .input-wrapper div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.educational-experience-form .data-wrapper {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+  padding: 8px;
+}
+
+.educational-experience-form .data-wrapper > div {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+  padding: 8px;
+  margin: 8px;
+}
+
+.educational-experience-form .data-wrapper .inner-data-wrapper {
+  margin: 8px;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+}
+.educational-experience-form .data-wrapper div ul li {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+  margin-block: 10px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.educational-experience-form .data-wrapper div ul li button {
+  max-width: 40px;
+  min-width: 40px;
+  padding: 4px;
+}
+
+.educational-experience-form .data-wrapper div input {
+  margin-right: 8px;
+}
+
+.educational-experience-form .data-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

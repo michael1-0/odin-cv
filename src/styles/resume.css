@@ -1,0 +1,49 @@
+h1 {
+  font-size: xx-large;
+}
+
+section > h2 {
+  font-size: 1.3rem;
+}
+
+section {
+  margin-bottom: 18px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+.resume {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 10px;
+  min-height: 900px;
+  padding-block: 55px;
+  padding-inline: 35px;
+  flex: 2;
+}
+
+.general-info h1,
+.general-info div:first-of-type {
+  text-align: center;
+}
+
+.general-info div:first-of-type {
+  padding-block: 6px;
+}
+
+.general-info div:nth-of-type(2) {
+  text-align: justify;
+}
+
+.area-of-expertise div {
+  display: flex;
+  flex-basis: 33%;
+  flex-wrap: wrap;
+}
+
+.practical-experience .experience-header,
+.educational-experience .experience-header {
+  display: flex;
+  justify-content: space-between;
+}
