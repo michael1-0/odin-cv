@@ -76,3 +76,69 @@ main {
   margin-inline: 200px;
   align-items: center;
 }
+
+main > * {
+  max-width: 800px;
+}
+
+@media screen and (max-width: 1440px) {
+  main {
+    margin-inline: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    flex-direction: column-reverse;
+  }
+
+  main .controls {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin-inline: 20px;
+  }
+  main .resume {
+    font-size: small;
+    margin: 0;
+    padding-inline: 20px;
+  }
+
+  main .controls {
+    padding: 10px;
+  }
+
+  main .controls form {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main .resume {
+    margin-top: 20px;
+    padding-block: 20px;
+  }
+
+  main .controls {
+    font-size: small;
+  }
+  main .controls form {
+    margin-inline: 0;
+  }
+
+  main {
+    margin-inline: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main .controls {
+    padding-inline: 6px;
+  }
+  main .controls form {
+    padding-inline: 4px;
+  }
+}
